@@ -43,6 +43,10 @@ const JobCategory = ({ job }) => {
           {minPrice} $ - {maxPrice} $
         </p>
         <p>
+          <span className="text-black font-medium ">Price Range:</span>{" "}
+          {applicantnumber} 
+        </p>
+        <p>
           <span className="text-black font-medium ">Description:</span>{" "}
           {description?.length > 100
             ? `${description.slice(0, 100)} ...`
