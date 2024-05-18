@@ -11,12 +11,14 @@ const AddJobs = () => {
     e.preventDefault();
     const form = e.target;
     const title = form.title.value;
+    const postedDate = form.postedDate.value;
     const deadline = form.deadline.value;
     const email = user?.email;
     const category = form.category.value;
     const minPrice = form.minPrice.value;
     const maxPrice = form.maxPrice.value;
     const desc = form.description.value;
+    const applicantnumber = form.applicantnumber.value;
     const userName = user ? user.displayName: "Unknown";
 console.log(title,deadline);
     // console.log(title, deadline, email, category, minPrice, maxPrice, desc);
@@ -25,10 +27,12 @@ console.log(title,deadline);
       userName,
       title,
       deadline,
+      postedDate,
       email,
       category,
       minPrice,
       maxPrice,
+      applicantnumber,
       desc,
     };
 
@@ -72,10 +76,26 @@ console.log(title,deadline);
             </div>
             <div>
               <label
-                htmlFor="deadline"
+                htmlFor="PostedDate"
                 className="block mb-2 font-medium text-gray-900 "
               >
-                Posted Date
+                Job Posted Date
+              </label>
+              <input
+                type="datetime-local"
+                id="deadline"
+                name="postedDate"
+                className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+                placeholder="Doe"
+                required
+              />
+            </div>
+            <div>
+              <label
+                htmlFor="Deadline"
+                className="block mb-2 font-medium text-gray-900 "
+              >
+                Aplication Deadline
               </label>
               <input
                 type="datetime-local"
@@ -165,6 +185,23 @@ console.log(title,deadline);
                 name="maxPrice"
                 id="max-price"
                 placeholder="maximum price"
+                className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                required
+              />
+            </div>
+           
+            <div>
+              <label
+                htmlFor="max-price"
+                className="block mb-2 font-medium text-gray-900 "
+              >
+                Applicants Number
+              </label>
+              <input
+                type="number"
+                name="applicantnumber"
+                id="max-price"
+                placeholder="Available Job"
                 className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                 required
               />

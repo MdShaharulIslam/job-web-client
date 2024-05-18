@@ -70,11 +70,11 @@ const Categories = () => {
       </h2>
       <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
         <TabList>
-          <Tab>All Jobs</Tab>
           <Tab>On-Site Job</Tab>
           <Tab>Remote Job</Tab>
           <Tab>Hybrid</Tab>
           <Tab>Part-Time</Tab>
+          <Tab>All Jobs</Tab>
         </TabList>
 
         <TabPanel>
