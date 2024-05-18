@@ -1,8 +1,8 @@
 # Job Junction - A Online job searching/hunting platform.
 
-## Live link: [Job Junction](https://job-junction-52e11.web.app/)
+## Live link: [Job Junction]()
 
-## Server side Github link: [Server side Github link](https://github.com/najrulislam38/job-junction-server)
+
 
 ## Used Technologies:
  - React.js, Taiwlind.css, Firebase, Node, Express.js, jsonwebtoken and MongoDB.
