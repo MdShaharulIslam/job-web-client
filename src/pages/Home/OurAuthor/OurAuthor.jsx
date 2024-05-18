@@ -12,7 +12,7 @@ const OurAuthor = () => {
       <div className="max-w-screen-xl mx-auto px-5 md:px-10">
         <div className="text-center">
           <h3 className="text-2xl md:text-3xl lg:text-4xl font-semibold">
-            Latest Authors In Shop
+           Authors
           </h3>
           <p className="max-w-3xl mx-auto my-6 text-gray-600">
             Here are some most recent members of our awesome cummunity. All
@@ -73,7 +73,7 @@ const OurAuthor = () => {
               Web-developing
             </h3>
           </div>
-          {/* shop 5 */}
+       
           <div className="shopCard bg-white p-2">
             <div className="overflow-hidden">
               <img

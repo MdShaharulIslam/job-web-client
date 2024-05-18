@@ -75,7 +75,7 @@ console.log(title,deadline);
                 htmlFor="deadline"
                 className="block mb-2 font-medium text-gray-900 "
               >
-                Deadline
+                Posted Date
               </label>
               <input
                 type="datetime-local"
@@ -131,9 +131,10 @@ console.log(title,deadline);
                 required
               >
                 <option value="">Select a category</option>
-                <option value="Web Development">Web Development</option>
-                <option value="Digital Marketing">Digital Marketing</option>
-                <option value="Graphic Design">Graphic Design</option>
+                <option value="Web Development">On-Site Job</option>
+                <option value="Digital Marketing">Remote Job</option>
+                <option value="Graphic Design">Hybrid</option>
+                <option value="Graphic Design">Part Time</option>
               </select>
             </div>
             <div>

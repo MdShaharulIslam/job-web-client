@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const JobCategory = ({ job }) => {
   //   const { title, deadline, email, category, minPrice, maxPrice, description } =
   //     job;
-  const { _id, title, deadline, minPrice, maxPrice, desc: description } = job;
+  const { _id, title, deadline, minPrice, maxPrice, desc: description,userName } = job;
 
   const formattedDate = new Date(deadline).toLocaleString("en", {
     year: "numeric",
@@ -18,10 +18,10 @@ const JobCategory = ({ job }) => {
     <div className="w-full h-fit flex flex-col border shadow-lg bg-base-100 rounded-md p-8">
       <div className="space-y-1 flex-1">
         <h1 className="text-xl font-medium ">
-          <span className=" text-black font-medium ">Name of Job Advertiser :</span> {title}
+          <span className=" text-black font-medium ">Name of Job Advertiser :</span> {userName}
         </h1>
         <h1 className="text-xl font-medium ">
-          <span className=" text-black font-medium ">Job Title:</span> {}
+          <span className=" text-black font-medium ">Job Title:</span> {title}
         </h1>
         <p>
           <span className="text-black font-medium ">Deadline:</span>{" "}
