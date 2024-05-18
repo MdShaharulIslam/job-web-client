@@ -48,17 +48,17 @@ const Navbar = () => {
           </li>
           <li>
             <NavLink to="/my-post-job" className={({ isActive }) => (isActive ? "text-[#008FD4]" : "")}>
-              My Post Job
+              My Job
             </NavLink>
           </li>
           <li>
             <NavLink to="/my-bids" className={({ isActive }) => (isActive ? "text-[#008FD4]" : "")}>
-              My Bids
+              Applied Job
             </NavLink>
           </li>
           <li>
             <NavLink to="/bid-requests" className={({ isActive }) => (isActive ? "text-[#008FD4]" : "")}>
-              Bid Requests
+              Blogs
             </NavLink>
           </li>
         </>
