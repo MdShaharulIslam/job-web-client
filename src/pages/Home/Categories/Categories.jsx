@@ -7,99 +7,96 @@ import { useQuery } from "@tanstack/react-query";
 
 const Categories = () => {
   const [tabIndex, setTabIndex] = useState(0);
-  // const [jobCategories, setJobCategories] = useState([]);
-  const [webCategories, setWebCategories] = useState([]);
-  const [digitalCategories, setDigitalCategories] = useState([]);
-  const [graphicCategories, setGraphicCategories] = useState([]);
+  const [onSite, setOnsite] = useState([]);
+  const [remoteJobs, setRemoteJobs] = useState([]);
+  const [hybridJobs, setHybridJobs] = useState([]);
+  const [partTimeJobs, setPartTimeJobs] = useState([]);
+ 
+  const [allJobs, setAllJobs] = useState([]);
 
-  // useEffect(() => {
-  //   axios
-  //     .get("http://localhost:5000/jobs", {
-  //       withCredentials: true,
-  //     })
-  //     .then((res) => {
-  //       if (res?.data) {
-  //         setJobCategories(res.data);
-  //       }
-  //     });
-  // }, []);
-
-  const { isPending, data: jobCategories } = useQuery({
+  const { isLoading, data: jobCategories } = useQuery({
     queryKey: ["jobCategories"],
     queryFn: async () => {
-      const response = await fetch(
-        "http://localhost:5000/jobs",
-        {
-          credentials: "include",
-        }
-      );
+      const response = await fetch("http://localhost:5000/jobs", {
+        credentials: "include",
+      });
       return response.json();
     },
   });
 
   useEffect(() => {
     if (jobCategories) {
-      const categories = jobCategories?.filter(
-        (job) => job?.category === "Web Development"
-      );
-      setWebCategories(categories);
-    }
-
-    if (jobCategories) {
-      const categories = jobCategories?.filter(
-        (job) => job?.category === "Digital Marketing"
-      );
-      setDigitalCategories(categories);
-    }
-    if (jobCategories) {
-      const categories = jobCategories?.filter(
-        (job) => job?.category === "Graphic Design"
-      );
-      setGraphicCategories(categories);
+      setOnsite(jobCategories.filter((job) => job.category === "On-Site Job"));
+      setRemoteJobs(jobCategories.filter((job) => job.category === "Remote Job"));
+      setHybridJobs(jobCategories.filter((job) => job.category === "Hybrid"));
+      setPartTimeJobs(jobCategories.filter((job) => job.category === "Part-Time"));
+      setAllJobs(jobCategories);
     }
   }, [jobCategories]);
 
-  if (isPending) {
-    return <Loading></Loading>;
+  if (isLoading) {
+    return <Loading />;
   }
 
   return (
-    <div className="max-w-screen-xl mx-auto px-5 md:px-10 my-10  lg:my-20">
-      <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold mb-4">
-        Job Categories
-      </h2>
+    <div className="max-w-screen-xl mx-auto px-5 md:px-10 my-10 lg:my-20">
+      <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold mb-4">Job Categories</h2>
       <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
         <TabList>
           <Tab>On-Site Job</Tab>
           <Tab>Remote Job</Tab>
           <Tab>Hybrid</Tab>
           <Tab>Part-Time</Tab>
+          
           <Tab>All Jobs</Tab>
         </TabList>
 
         <TabPanel>
-          <div className="min-h-screen ">
+          <div className="min-h-screen">
             <div className="grid gap-6 grid-cols-1 lg:grid-cols-2 mt-5">
-              {webCategories?.map((job) => (
-                <JobCategory key={job._id} job={job}></JobCategory>
+              {onSite.map((job) => (
+                <JobCategory key={job._id} job={job} />
               ))}
             </div>
           </div>
         </TabPanel>
+
         <TabPanel>
           <div className="min-h-screen">
-            <div className="grid gap-6 grid-cols-1 lg:grid-cols-2  mt-5 justify-center">
-              {digitalCategories?.map((job) => (
-                <JobCategory key={job._id} job={job}></JobCategory>
+            <div className="grid gap-6 grid-cols-1 lg:grid-cols-2 mt-5">
+              {remoteJobs.map((job) => (
+                <JobCategory key={job._id} job={job} />
               ))}
             </div>
           </div>
         </TabPanel>
+
         <TabPanel>
           <div className="min-h-screen">
             <div className="grid gap-6 grid-cols-1 lg:grid-cols-2 mt-5">
-              {graphicCategories?.map((job) => (
-                <JobCategory key={job._id} job={job}></JobCategory>
+              {hybridJobs.map((job) => (
+                <JobCategory key={job._id} job={job} />
+              ))}
+            </div>
+          </div>
+        </TabPanel>
+
+        <TabPanel>
+          <div className="min-h-screen">
+            <div className="grid gap-6 grid-cols-1 lg:grid-cols-2 mt-5">
+              {partTimeJobs.map((job) => (
+                <JobCategory key={job._id} job={job} />
+              ))}
+            </div>
+          </div>
+        </TabPanel>
+       
+
+        <TabPanel>
+          <div className="min-h-screen">
+            <div className="grid gap-6 grid-cols-1 lg:grid-cols-2 mt-5">
+              {allJobs.map((job) => (
+                <JobCategory key={job._id} job={job} />
               ))}
             </div>
           </div>
