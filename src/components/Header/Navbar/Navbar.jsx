@@ -61,6 +61,11 @@ const Navbar = () => {
               Blogs
             </NavLink>
           </li>
+          <li>
+            <NavLink to="/alljobs" className={({ isActive }) => (isActive ? "text-[#008FD4]" : "")}>
+              All jobs
+            </NavLink>
+          </li>
         </>
       )}
     </>
