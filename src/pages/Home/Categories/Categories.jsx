@@ -17,7 +17,7 @@ const Categories = () => {
   const { isLoading, data: jobCategories } = useQuery({
     queryKey: ["jobCategories"],
     queryFn: async () => {
-      const response = await fetch("http://localhost:5000/jobs", {
+      const response = await fetch("https://job-junction-server-seven.vercel.app/jobs", {
         credentials: "include",
       });
       return response.json();

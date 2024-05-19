@@ -31,11 +31,11 @@ const JobCategory = ({ job }) => {
           <span className=" text-black font-medium ">Job Title:</span> {title}
         </h1>
         <p>
-          <span className="text-black font-medium ">Deadline:</span>{""}
+          <span className="text-black font-medium ">Application Deadline:</span>{""}
           {formattedDate}
         </p>
         <p>
-          <span className="text-black font-medium ">Deadline:</span>{""}
+          <span className="text-black font-medium ">Posted Date:</span>{""}
           {jobpostedDate}
         </p>
         <p>
@@ -43,7 +43,7 @@ const JobCategory = ({ job }) => {
           {minPrice} $ - {maxPrice} $
         </p>
         <p>
-          <span className="text-black font-medium ">Price Range:</span>{" "}
+          <span className="text-black font-medium ">Applicant Number:</span>{" "}
           {applicantnumber} 
         </p>
         <p>
