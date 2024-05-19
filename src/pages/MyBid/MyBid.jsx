@@ -78,13 +78,13 @@ const MyBid = () => {
         {myBids.length === 0 ? (
           <div>
             <h1 className="text-xl md:text-3xl text-center font-semibold">
-              You have not bid on any jobs yet.
+              You have not apply any jobs yet.
             </h1>
           </div>
         ) : (
           <div className="overflow-x-auto">
             <h1 className="text-xl md:text-3xl text-center mb-5 font-semibold">
-              My Bids
+              My Application
             </h1>
             <div className="overflow-x-auto shadow-md rounded-lg">
               <table className="w-full text-base text-left text-gray-500">

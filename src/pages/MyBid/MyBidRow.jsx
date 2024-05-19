@@ -21,7 +21,7 @@ const MyBidRow = ({ myBid, handleCompleteJob }) => {
               : "btn-disabled  bg-[#0870A1] opacity-60"
           }`}
         >
-          Complete
+         Confirm
         </button>
       </td>
     </tr>
