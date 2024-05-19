@@ -29,7 +29,7 @@ const Categories = () => {
       setOnsite(jobCategories.filter((job) => job.category === "On-Site Job"));
       setRemoteJobs(jobCategories.filter((job) => job.category === "Remote Job"));
       setHybridJobs(jobCategories.filter((job) => job.category === "Hybrid"));
-      setPartTimeJobs(jobCategories.filter((job) => job.category === "Part-Time"));
+      setPartTimeJobs(jobCategories.filter((job) => job.category === "Part Time"));
       setAllJobs(jobCategories);
     }
   }, [jobCategories]);
