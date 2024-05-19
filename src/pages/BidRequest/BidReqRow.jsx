@@ -2,7 +2,6 @@ import PropTypes from "prop-types";
 
 const BidReqRow = ({ bidReq, handleCancelBidReq, handleAcceptBidReq }) => {
   const { title, bidReqEmail, bidReqPrice, deadline, status } = bidReq;
-
   return (
     <tr className="bg-white border ">
       <th className="px-6 py-4 font-medium text-gray-900 ">{title}</th>

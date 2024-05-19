@@ -33,11 +33,9 @@ const AllJobs = () => {
       )
     );
   }, [searchTerm, allJobs]);
-
   if (isLoading) {
     return <Loading />;
   }
-
   return (
     <div className="max-w-screen-xl mx-auto px-5 md:px-10 my-10 lg:my-20">
       <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold mb-4">All Categories Jobs</h2>
