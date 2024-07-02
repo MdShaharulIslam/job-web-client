@@ -25,7 +25,7 @@
 
 ### Installation
 
-1. Clone the repository: `git clone`
+1. Clone the repository: `git clone https://github.com/MdShaharulIslam/job-web-client.git`
 2. Navigate to the project directory: `cd `
 3. Install dependencies: `npm install`
 4. Set up environment variables: Create a `.env` file and add necessary configuration.
