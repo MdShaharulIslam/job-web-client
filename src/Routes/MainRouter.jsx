@@ -63,7 +63,7 @@ const MainRouter = createBrowserRouter([
         ),
         loader: async ({ params }) =>
           await fetch(
-            `http://localhost:5000/jobs/${params.id}`
+            `https://job-web-server-one.vercel.app/jobs/${params.id}`
           ),
       },
       {
@@ -75,7 +75,7 @@ const MainRouter = createBrowserRouter([
         ),
         loader: async ({ params }) =>
           await fetch(
-            `http://localhost:5000/jobs/${params.id}`
+            `https://job-web-server-one.vercel.app/jobs/${params.id}`
           ),
       },
       {

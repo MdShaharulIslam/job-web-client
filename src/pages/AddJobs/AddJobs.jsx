@@ -37,7 +37,7 @@ console.log(title,deadline);
     };
 
     axios
-      .post("http://localhost:5000/jobs", jobInfo)
+      .post("https://job-web-server-one.vercel.app/jobs", jobInfo)
       .then((res) => {
         // console.log(res);
         if (res.data?.insertedId) {

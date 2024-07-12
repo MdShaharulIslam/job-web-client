@@ -14,7 +14,7 @@ const Categories = () => {
 
   // useEffect(() => {
   //   axios
-  //     .get("http://localhost:5000/jobs", {
+  //     .get("https://job-web-server-one.vercel.app/jobs", {
   //       withCredentials: true,
   //     })
   //     .then((res) => {
@@ -28,7 +28,7 @@ const Categories = () => {
     queryKey: ["jobCategories"],
     queryFn: async () => {
       const response = await fetch(
-        "http://localhost:5000/jobs",
+        "https://job-web-server-one.vercel.app/jobs",
         {
           credentials: "include",
         }

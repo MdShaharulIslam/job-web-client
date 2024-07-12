@@ -11,7 +11,7 @@ const BidRequest = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/jobs?email=${user?.email}`, {
+      .get(`https://job-web-server-one.vercel.app/jobs?email=${user?.email}`, {
         withCredentials: true,
       })
       .then((res) => {
@@ -44,7 +44,7 @@ const BidRequest = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         fetch(
-          `http://localhost:5000/bids?email=${email}&title=${title}`,
+          `https://job-web-server-one.vercel.app/bids?email=${email}&title=${title}`,
           {
             method: "PATCH",
             headers: {
@@ -86,7 +86,7 @@ const BidRequest = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         fetch(
-          `http://localhost:5000/bids?email=${email}&title=${title}`,
+          `https://job-web-server-one.vercel.app/bids?email=${email}&title=${title}`,
           {
             method: "PATCH",
             headers: {

@@ -13,7 +13,7 @@ const MyJobs = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/jobs?email=${user?.email}`, {
+      .get(`https://job-web-server-one.vercel.app/jobs?email=${user?.email}`, {
         withCredentials: true,
       })
       .then((res) => {
@@ -37,7 +37,7 @@ const MyJobs = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         axios
-          .delete(`http://localhost:5000/jobs/${id}`)
+          .delete(`https://job-web-server-one.vercel.app/jobs/${id}`)
           .then((res) => {
             // console.log(res.data);
             if (res.data.deletedCount > 0) {
