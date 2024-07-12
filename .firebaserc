@@ -1,5 +1,9 @@
 {
   "projects": {
-    "default": "job-junction-52e11"
-  }
+    "job-web-client": "job-web-client",
+    "default": "job-web-client"
+  },
+  "targets": {},
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
 }
