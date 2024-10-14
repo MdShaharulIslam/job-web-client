@@ -9,9 +9,9 @@ const Root = () => {
 
   useEffect(() => {
     if (location.pathname === "/") {
-      document.title = "Job Junction";
+      document.title = "JobTrack";
     } else {
-      document.title = `Job Junction ${location.pathname.replace("/", " | ")}`;
+      document.title = `JobTrack ${location.pathname.replace("/", " | ")}`;
     }
   }, [location]);
 
