@@ -96,10 +96,12 @@ const Navbar = () => {
               </ul>
             </div>
             <div className="flex gap-1 items-end">
-              <img src={logo} alt="Logo" className="w-8 lg:w-10" />
+              <img src={logo} alt="Logo" className="w-10 lg:w-24" />
               <h2 className="text-base md:text-xl font-bold">
-                <span className="text-xl md:text-2xl text-[#008FD4]">Job.</span> Junction
-              </h2>
+  <span className="text-xl md:text-2xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+    JobTrack
+  </span>
+</h2>
             </div>
           </div>
           <div className="hidden lg:flex">
