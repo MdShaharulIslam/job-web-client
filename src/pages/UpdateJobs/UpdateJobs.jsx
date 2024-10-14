@@ -32,7 +32,7 @@ const UpdateJobs = () => {
     };
 
     axios
-      .put(`https://job-junction-server-seven.vercel.app/jobs/${_id}`, updateJobInfo)
+      .put(`https://job-web-server.vercel.app/jobs/${_id}`, updateJobInfo)
       .then((res) => {
         if (res.data?.modifiedCount > 0) {
           toast.success("Job information updated successfully.");

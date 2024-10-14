@@ -72,7 +72,7 @@ const MainRouter = createBrowserRouter([
         ),
         loader: async ({ params }) =>
           await fetch(
-            `https://job-junction-server-seven.vercel.app/jobs/${params.id}`
+            `https://job-web-server.vercel.app/jobs/${params.id}`
           ),
       },
       {
@@ -84,7 +84,7 @@ const MainRouter = createBrowserRouter([
         ),
         loader: async ({ params }) =>
           await fetch(
-            `https://job-junction-server-seven.vercel.app/jobs/${params.id}`
+            `https://job-web-server.vercel.app/jobs/${params.id}`
           ),
       },
       {

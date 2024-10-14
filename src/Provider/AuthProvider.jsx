@@ -56,7 +56,7 @@ const AuthProvider = ({ children }) => {
 
       if (currentUser) {
         axios
-          .post("https://job-junction-server-seven.vercel.app/jwt", loggedUser, {
+          .post("https://job-web-server.vercel.app/jwt", loggedUser, {
             withCredentials: true,
           })
           .then((res) => {
@@ -64,7 +64,7 @@ const AuthProvider = ({ children }) => {
           });
       } else {
         axios
-          .post("https://job-junction-server-seven.vercel.app/logout", loggedUser, {
+          .post("https://job-web-server.vercel.app/logout", loggedUser, {
             withCredentials: true,
           })
           .then((res) => {

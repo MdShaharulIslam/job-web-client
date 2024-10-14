@@ -11,7 +11,7 @@ const MyBid = () => {
   useEffect(() => {
     if (user) {
       axios
-        .get(`https://job-junction-server-seven.vercel.app/bids?email=${user.email}`, {
+        .get(`https://job-web-server.vercel.app/bids?email=${user.email}`, {
           withCredentials: true,
         })
         .then((res) => {
@@ -34,7 +34,7 @@ const MyBid = () => {
       confirmButtonText: "Yes, confirm it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`https://job-junction-server-seven.vercel.app/jobs?email=${email}&title=${title}`, {
+        fetch(`https://job-web-server.vercel.app/jobs?email=${email}&title=${title}`, {
           method: "PATCH",
           headers: {
             "Content-Type": "application/json",
